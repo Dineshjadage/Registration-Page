@@ -1,0 +1,23 @@
+                
+form {
+    margin: auto;
+    width: 200px;
+}
+
+html {
+    display: table;
+    margin: auto;
+    text-align: center; 
+    width: 100%;
+    padding: 20px;
+}
+
+body {
+    background-color: lavender; 
+    border-width: medium; 
+    margin-top: 100px; 
+    margin-bottom: 100px; 
+    margin-right: 150px;
+    margin-left: 80px;
+    padding: 20px;
+}

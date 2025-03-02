@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<h1 "text-align:center">COLLEGE REGISTRATION</h1>
+	<link rel="StyleSheet" href="Style.css">
+	<Script="S.js"></script>
+</head>
+<body>
+	<form  name="regform" method="Post" form action="studentdata.html" onsubmit="return validateform();" method="Post"from action="studentdata.php">
+	 <label for="name">NAME:</label>
+        <input type="text" id="name" name="name" pattern="[A-Za-z\s]+" title="Please use only letters">
+        <br><br>
+        <label for="mail">EMAIL:</label>
+        <input type="email" id="mail" name="mail">
+        <br><br>
+        <label for="pwd">PASSWORD:</label>
+        <input type="password" id="pwd" name="pwd">
+        <br><br>
+<label for="confirm_pwd">CONFIRM PASSWORD:</label>
+        <input type="password" id="confirm_pwd" name="confirm_pwd">
+        <br><br>
+	  <button type="submit" <button style="color: red;">Submit</button>  
+</form>
+    <script>
+        function validateform() {
+            var name = document.regform.name.value.trim();
+            var email = document.regform.mail.value.trim();
+            var password = document.regform.pwd.value.trim();
+   var confirmpassword= document.regform.confirm_pwd.value.trim();
+
+	if (name === "" ) {
+                alert("Name cannot be blank");
+                return false;
+            }
+   if (email === "" ) {
+                alert("email cannot be blank");
+                return false;
+            }
+ if (password.length < 6 || password === "" ) {
+alert("Password cannot be blank");
+               
+                return false;
+            }
+   if (password !== confirmpassword) {
+                alert("Passwords do not match");
+                return false;
+            }
+	return true;
+}
+</script>
+</body>
+</html>
